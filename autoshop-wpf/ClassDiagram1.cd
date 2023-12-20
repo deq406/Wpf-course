@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Autoshop.Models.Car" Collapsed="true">
+    <Position X="39" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAABQAAgAAAAAAAABAAAAAAABAAAAgAAAABAAA=</HashCode>
+      <FileName>Models\Car.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Autoshop.Models.Order" Collapsed="true">
+    <Position X="40.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAEBQAAgAAAAAAAABiAAAgAABAAAAgAAAABAAA=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Autoshop.Models.Requirements" Collapsed="true">
+    <Position X="42.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIBAAAABQAAgAAAAAAAABgAAAAAABAAAAgAAAABAAA=</HashCode>
+      <FileName>Models\Requirements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Autoshop.Models.User" Collapsed="true">
+    <Position X="39" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgEAAAAAAAQAgAAAAAAAAAAACAIAAAACAAAQIQAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Autoshop.Models.UserContext" Collapsed="true">
+    <Position X="40.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAACACAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\UserContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Autoshop.Views.LogInPage">
+    <Position X="22.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAQAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Views\LogInPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.918" />
+  </Class>
+  <Class Name="Autoshop.Views.RegisterPage">
+    <Position X="19.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEAQACAAAAACAAAAAwAEAAAAAAAAABEAAAA=</HashCode>
+      <FileName>Views\RegisterPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="System.Windows.Controls.Page" Collapsed="true">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.AdminOrUserPage">
+    <Position X="15.25" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminOrUserPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Autoshop.Views.AdminPage">
+    <Position X="24.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACCAAAAVQAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Views\AdminPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.UserPage">
+    <Position X="15.25" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAACAABAAVQABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UserPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.UserCarsPage">
+    <Position X="15.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAEAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UserCarsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.UserLikesPage">
+    <Position X="15.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAQAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UserLikesPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.UserNewOrderPage">
+    <Position X="18.5" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Views\UserNewOrderPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.CreateRequirement">
+    <Position X="17.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAIAAAQAAAAIAAAAAAEAwAEAABAAAAAAAEAAAA=</HashCode>
+      <FileName>Views\CreateRequirement.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.AdminCarsPage">
+    <Position X="20.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAACAAAgQAAAAAAAAAAAAAwIEAAAAAAAAAAkAAAA=</HashCode>
+      <FileName>Views\AdminCarsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.AdminFindCarForUser">
+    <Position X="21.25" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAEAAQAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\AdminFindCarForUser.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.AdminOrdersPage">
+    <Position X="26.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAgAAAAAAAAAAAAAQAAABBAEAAAIAAAAAA=</HashCode>
+      <FileName>Views\AdminOrdersPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.UserOrdersPage">
+    <Position X="22" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\UserOrdersPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.UserProfilePage">
+    <Position X="23.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEgQAAAAAAAAIAAAAwAEAAAIAAAACBEAAQA=</HashCode>
+      <FileName>Views\UserProfilePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Autoshop.Views.AdminUsersPage">
+    <Position X="18" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgAAAAAAAAAAAAACAAAAAAQAAEAAAAAAAoAAAAAA=</HashCode>
+      <FileName>Views\AdminUsersPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

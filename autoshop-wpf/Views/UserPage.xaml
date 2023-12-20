@@ -1,0 +1,95 @@
+﻿<Page x:Class="Autoshop.Views.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Autoshop.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="UserPage"
+      Loaded="Page_Loaded"
+      
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="15"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="48"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0"
+              Background="{DynamicResource MaterialDesignBodyLight}">
+
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Center">
+                <Button Click="Sneakers_Click"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Foreground="{DynamicResource MaterialDesignPaper}">
+                    <materialDesign:PackIcon Kind="Car" />
+                </Button>
+                <Button Click="Users_Click"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Foreground="{DynamicResource MaterialDesignPaper}">
+                    <materialDesign:PackIcon Kind="User" />
+                </Button>
+                <Button Click="Likes_Click"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Foreground="{DynamicResource MaterialDesignPaper}">
+                    <materialDesign:PackIcon Kind="Heart" />
+                </Button>
+                <Button Click="Orders_Click"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Foreground="{DynamicResource MaterialDesignPaper}">
+                    <materialDesign:PackIcon Kind="FileDocument" />
+                </Button>
+                <Button Click="Find_Click"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Foreground="{DynamicResource MaterialDesignPaper}"> 
+                    <materialDesign:PackIcon Kind="FindInPage" />
+                </Button>
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center">
+                <Button Click="GoToAdmin_Click"
+                        x:Name="gotoAdmin"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Foreground="{DynamicResource MaterialDesignPaper}"
+                        Visibility="Collapsed">
+                    <materialDesign:PackIcon Kind="UserEdit" />
+                </Button>
+                <Button Click="Exit_Click"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Foreground="{DynamicResource MaterialDesignPaper}">
+                    <materialDesign:PackIcon Kind="ExitRun" />
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="19*"/>
+                <RowDefinition Height="581*"/>
+            </Grid.RowDefinitions>
+            <Frame x:Name="UserFrame"
+               x:FieldModifier="public"
+               NavigationUIVisibility="Hidden" Grid.RowSpan="2"/>
+        </Grid>
+    </Grid>
+</Page>

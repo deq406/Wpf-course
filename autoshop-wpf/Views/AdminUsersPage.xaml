@@ -1,0 +1,149 @@
+﻿<Page x:Class="Autoshop.Views.AdminUsersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Autoshop.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="AdminUsersPage"
+      Loaded="Page_Loaded"
+      
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="15"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0"
+              Margin="10">
+            <DataGrid x:Name="usersGrid"
+                      SelectionChanged="usersGrid_SelectionChanged"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      CanUserResizeColumns="False"
+                      CanUserReorderColumns="False"
+                      CanUserResizeRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding ID}" Header="ID"/>
+                    <DataGridTextColumn Binding="{Binding Login}" Header="Login"/>
+                    <DataGridTextColumn Binding="{Binding FIO}" Header="FIO"/>
+                    <DataGridTextColumn Binding="{Binding Mail}" Header="Mail"/>
+                    <DataGridTextColumn Binding="{Binding Phone}" Header="Phone"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Column="1"
+              Margin="10"
+              x:Name="sortingGrid"
+              Visibility="Visible">
+
+            <StackPanel>
+                <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                           Text="Sorting"/>
+
+                <Grid Margin="0 10 0 0"
+                      VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Button Content="Show admins"
+                        Click="ShowAdmins_Click"
+                        Grid.Column="0"
+                        Margin="0 0 5 0"
+                        Background="White"/>
+
+                    <Button Content="Restore"
+                        Click="RestoreSort_Click"
+                        Grid.Column="1"
+                        Margin="5 0 0 0"
+                        Background="White"/>
+                </Grid>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="1"
+              Margin="10"
+              x:Name="userGrid"
+              Visibility="Collapsed">
+
+            <StackPanel Orientation="Vertical"
+                        x:Name="selectedOrderGrid">
+                
+                <TextBox materialDesign:HintAssist.Hint="ID"
+                         Text="{Binding ID}"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         IsReadOnly="True"
+                         Grid.Column="0"/>
+
+                <TextBox materialDesign:HintAssist.Hint="FIO"
+                         x:Name="FIO"
+                         IsReadOnly="True"
+                         Text="{Binding FIO}"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                
+                <TextBox materialDesign:HintAssist.Hint="Mail"
+                         x:Name="Mail"
+                         IsReadOnly="True"
+                         Text="{Binding Mail}"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox materialDesign:HintAssist.Hint="Phone"
+                         x:Name="Phone"
+                         IsReadOnly="True"
+                         Text="{Binding Phone}"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+
+                <CheckBox Content="isAdmin"
+                          x:Name="isAdmin"
+                          Margin="0 10 0 0"
+                          IsChecked="{Binding IsAdmin}"
+                          Style="{StaticResource MaterialDesignCheckBox}"/>
+            </StackPanel>
+
+            <Grid Margin="0 10 0 0"
+                  VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Button Content="Restore password"
+                        Click="RestorePass_Click"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Grid.Row="0"
+                        Margin="0 0 0 10">
+                </Button>
+
+                <Button Content="Save"
+                        Click="SaveUser_Click"
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Margin="0 0 5 0">
+                </Button>
+
+                <Button Content="Clear"
+                        Click="ClearGrid_Click"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="5 0 0 0"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

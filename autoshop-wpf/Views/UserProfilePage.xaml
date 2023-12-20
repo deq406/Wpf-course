@@ -1,0 +1,92 @@
+﻿<Page x:Class="Autoshop.Views.UserProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Autoshop.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="UserProfilePage"
+      Loaded="Page_Loaded"
+      
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="15"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0"
+                        Orientation="Vertical"
+                        Margin="20"
+                        x:Name="profileGrid">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource MaterialDesignHeadline2TextBlock}"
+                               x:Name="ID"
+                               Margin="0 0 20 0"/>
+                    <TextBlock Style="{StaticResource MaterialDesignHeadline3TextBlock}"
+                               Text="{Binding Login}"
+                               x:Name="Login"
+                               VerticalAlignment="Bottom"
+                               Margin="0 0 0 3"/>
+                </StackPanel>
+                <TextBox materialDesign:HintAssist.Hint="FIO"
+                         Text="{Binding FIO}"
+                         x:Name="FIO"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <TextBox materialDesign:HintAssist.Hint="Mail"
+                         Text="{Binding Mail}"
+                         x:Name="Mail"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <TextBox materialDesign:HintAssist.Hint="Phone"
+                         Text="{Binding Phone}"
+                         x:Name="Phone"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Button Content="Save"
+                            Margin="0 10 0 0"
+                            Click="SaveData_Click"
+                            Background="White"
+                            />
+                </Grid>
+            </StackPanel>
+            <StackPanel Orientation="Vertical"
+                        Margin="20"
+                        Grid.Column="1">
+                <TextBlock Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                               Text="Change password"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Current password"
+                             x:Name="currentPass"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <PasswordBox materialDesign:HintAssist.Hint="New password"
+                             x:Name="newPass"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Confirm password"
+                             x:Name="confPass"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <Button Content="Change"
+                        Margin="0 10 0 0"
+                        Click="ChangePass_Click"
+                        Background="White"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autoshop", "Autoshop.csproj", "{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}.Debug|x64.Build.0 = Debug|Any CPU
+		{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}.Release|x64.ActiveCfg = Release|x64
+		{F32E29A5-A12E-4AEA-B56B-DE5E562A14AF}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD4E19F8-C235-4A38-8F31-DA231AA4EA5B}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,89 @@
+﻿<Page x:Class="Autoshop.Views.RegisterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Autoshop.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="RegisterPage"
+      Loaded="Page_Loaded"
+      
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="15"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Images/cars.jpg"
+                            Stretch="UniformToFill"/>
+            </Grid.Background>
+        </Grid>
+
+        <Grid Grid.Column="1">
+
+            <StackPanel Orientation="Vertical"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        Width="250">
+                <Image Source="/Images/car.ico"
+                       Width="85"/>
+                <TextBlock FontWeight="Bold"
+                           Text="AUTOSHOP"
+                           HorizontalAlignment="Center"/>
+                <TextBox materialDesign:HintAssist.Hint="Login"
+                         x:Name="regLogin"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <TextBox materialDesign:HintAssist.Hint="FIO"
+                         x:Name="regFIO"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <TextBox materialDesign:HintAssist.Hint="Mail"
+                         x:Name="regMail"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <TextBox materialDesign:HintAssist.Hint="Phone"
+                         x:Name="regPhone"
+                         Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                         materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Password"
+                             x:Name="regPass"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <PasswordBox materialDesign:HintAssist.Hint="Confirm password"
+                             x:Name="regPassConf"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"
+                             materialDesign:TextFieldAssist.HasClearButton="True"/>
+                <Button Click="SignUp_Click"
+                        Content="Sign Up"
+                        Margin="0 10 0 0"
+                        Background="White"/>
+
+                <Button Click="LogIn_Click"
+                        Background="{x:Null}"
+                        BorderBrush="{x:Null}"
+                        Foreground="{DynamicResource MaterialDesignBody}"
+                        Margin="0 10 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Already have an account?"
+                                   VerticalAlignment="Center"/>
+                        <materialDesign:PackIcon Kind="ArrowRight"
+                                                 Margin="5 0 0 0"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,99 @@
+﻿<Page x:Class="Autoshop.Views.AdminFindCarForUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:Autoshop.Views"
+    mc:Ignorable="d" 
+    d:DesignHeight="600" d:DesignWidth="1000"
+    Title="AdminFindCar"
+    Loaded="Page_Loaded"
+      
+      
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+    TextElement.FontWeight="Regular"
+    TextElement.FontSize="15"
+    TextOptions.TextFormattingMode="Ideal"
+    TextOptions.TextRenderingMode="Auto"
+    Background="{DynamicResource MaterialDesignPaper}"
+    FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0"
+           Margin="10">
+            <DataGrid x:Name="requirementsGrid"
+                      SelectionChanged="require_SelectionChanged"
+                   AutoGenerateColumns="False"
+                   IsReadOnly="True"
+                   CanUserResizeColumns="False"
+                   CanUserReorderColumns="False"
+                   CanUserResizeRows="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding ID}" Header="ID"/>
+                    <DataGridTextColumn Binding="{Binding Brand}" Header="Brand"/>
+                    <DataGridTextColumn Binding="{Binding Model}" Header="Model"/>
+                    <DataGridTextColumn Binding="{Binding Year}" Header="Year"/>
+                    <DataGridTextColumn Binding="{Binding Mileage}" Header="Mileage"/>
+                    <DataGridTextColumn Binding="{Binding EngineType}" Header="EngineType"/>
+                    <DataGridTextColumn Binding="{Binding Price}" Header="Price"/>
+                    <DataGridTemplateColumn Header="Photo">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Path=Image}"
+                                    Width="75"
+                                    Height="75" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid Grid.Column="1"
+           Margin="10">
+            <DataGrid x:Name="carsGrid"
+                           SelectionChanged="carsGrid_SelectionChanged"
+                           AutoGenerateColumns="False"
+                           IsReadOnly="True"
+                           CanUserResizeColumns="False"
+                           CanUserReorderColumns="False"
+                           CanUserResizeRows="False" Margin="0,0,0,37">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding ID}" Header="ID"/>
+                    <DataGridTextColumn Binding="{Binding Brand}" Header="Brand"/>
+                    <DataGridTextColumn Binding="{Binding Model}" Header="Model"/>
+                    <DataGridTextColumn Binding="{Binding Year}" Header="Year"/>
+                    <DataGridTextColumn Binding="{Binding Mileage}" Header="Mileage"/>
+                    <DataGridTextColumn Binding="{Binding EngineType}" Header="EngineType"/>
+                    <DataGridTextColumn Binding="{Binding Price}" Header="Price"/>
+                    <DataGridTemplateColumn Header="Photo">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Path=Image}"
+                        Width="75"
+                        Height="75" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid Margin="0 10 0 0"
+VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0"
+      Content="Fullfil a requirement"
+      Background="White"
+                        Click="Button_Click"/>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</Page>
